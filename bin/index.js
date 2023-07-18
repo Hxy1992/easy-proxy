@@ -12,12 +12,12 @@ const FileName = 'proxy.config.json';
 
 const cli = meow(`
 	使用
-    $ e-proxy init
-	  $ e-proxy <input>
-	  $ e-proxy
+    $ proxy-here init
+	  $ proxy-here <input>
+	  $ proxy-here
 
 	示例
-	  $ e-proxy ./input/config.json
+	  $ proxy-here ./input/config.json
 `, {
 	importMeta: import.meta,
 	flags: {}

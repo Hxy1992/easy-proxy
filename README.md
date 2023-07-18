@@ -6,15 +6,15 @@
 ## 安装
 
 ```shell
-npm install e-proxy -g
+npm install proxy-here -g
 ```
 
 ## 本地调试
 
 ```shell
 npm link
-e-proxy init
-e-proxy
+proxy-here init
+proxy-here
 ```
 
 
@@ -25,12 +25,12 @@ e-proxy
 ```shell
 
 # 在项目目录初始化，并生成配置文件
-e-proxy init
+proxy-here init
 
 # 启动代理服务（指定配置文件）
-e-proxy ./config.json
+proxy-here ./config.json
 
 # 启动代理服务（默认配置文件proxy.config.json）
-e-proxy
+proxy-here
 
 ```
