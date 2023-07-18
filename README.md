@@ -6,15 +6,15 @@
 ## 安装
 
 ```shell
-npm install easy-proxy -g
+npm install e-proxy -g
 ```
 
 ## 本地调试
 
 ```shell
 npm link
-easy-proxy init
-easy-proxy
+e-proxy init
+e-proxy
 ```
 
 
@@ -25,12 +25,12 @@ easy-proxy
 ```shell
 
 # 在项目目录初始化，并生成配置文件
-easy-proxy init
+e-proxy init
 
 # 启动代理服务（指定配置文件）
-easy-proxy ./config.json
+e-proxy ./config.json
 
 # 启动代理服务（默认配置文件proxy.config.json）
-easy-proxy
+e-proxy
 
 ```

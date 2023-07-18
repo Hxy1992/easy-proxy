@@ -12,12 +12,12 @@ const FileName = 'proxy.config.json';
 
 const cli = meow(`
 	使用
-    $ easy-proxy init
-	  $ easy-proxy <input>
-	  $ easy-proxy
+    $ e-proxy init
+	  $ e-proxy <input>
+	  $ e-proxy
 
 	示例
-	  $ easy-proxy ./input/config.json
+	  $ e-proxy ./input/config.json
 `, {
 	importMeta: import.meta,
 	flags: {}

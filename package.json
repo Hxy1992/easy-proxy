@@ -1,5 +1,5 @@
 {
-  "name": "easy-proxy",
+  "name": "e-proxy",
   "version": "0.0.2",
   "description": "简易代理服务, 通过json配置启动服务, 支持代理",
   "type": "module",
