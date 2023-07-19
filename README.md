@@ -9,18 +9,8 @@
 npm install proxy-here -g
 ```
 
-## 本地调试
-
-```shell
-npm link
-proxy-here init
-proxy-here
-```
-
-
 ## 使用
 
-使用说明如下：
 
 ```shell
 
@@ -34,3 +24,36 @@ proxy-here ./config.json
 proxy-here
 
 ```
+## 配置说明
+
+```json
+{
+  "host": "0.0.0.0", // 服务启动地址
+  "base": "./", // 根目录的相对路径
+  "port": 8080, // 端口
+  "open": true, // 是否自动打开
+  "compression": true, // 是否开启压缩
+  // 代理配置
+  "proxy": [
+      {
+          "target": "http://192.168.0.1:8001", // 目标
+          "changeOrigin": true, // 跨域
+          "ws": true, // 支持websocket
+          "path": "/api", // 路由
+          "pathRewrite": {
+              "^/api": "" // 路由重写
+          }
+      }
+  ]
+}
+
+```
+
+## 本地调试
+
+```shell
+npm link
+proxy-here init
+proxy-here
+```
+
