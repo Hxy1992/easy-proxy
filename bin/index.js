@@ -23,8 +23,8 @@ const cli = meow(`
 	flags: {}
 });
 
-// 初始化生成json配置
 if (cli.input.at(0) === "init") {
+  // 初始化生成json配置
   const from = resolve(__root, FileName)
   const to = resolve(__dirname, FileName)
   copy(from, to)

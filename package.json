@@ -1,6 +1,6 @@
 {
   "name": "proxy-here",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "简易代理服务, 通过json配置启动服务, 支持代理",
   "type": "module",
   "bin": "./bin/index.js",

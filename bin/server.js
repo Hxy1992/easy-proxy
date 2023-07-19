@@ -1,17 +1,11 @@
 // 创建服务
-// const express = require("express");
-// const { createProxyMiddleware } = require("http-proxy-middleware");
-// const open = require("open");
-// const compression = require("compression");
-// const EventEmitter = require("events").EventEmitter;
-// const os = require("os");
-
 import express from 'express'
 import {createProxyMiddleware} from 'http-proxy-middleware'
 import open from 'open'
 import compression from 'compression'
 import {EventEmitter} from 'events'
 import os from 'os'
+import { printSuccess } from "./log.js"
 
 // 设置限制监听器的数量
 EventEmitter.setMaxListeners(20);
@@ -48,8 +42,8 @@ export function createServer(option = {}) {
 	const server = app.listen(port, host, () => {
 		const realIp = getIpAddress() || host;
 		const realPort = server.address().port;
-		console.log("服务启动: http://%s:%s", host, realPort);
-		console.log("服务启动: http://%s:%s", realIp, realPort);
+    printSuccess(`服务启动: http://${host}:${realPort}`)
+    printSuccess(`服务启动: http://${realIp}:${realPort}`)
 		if (option.open) open(`http://${realIp}:${realPort}`);
 	});
 }
